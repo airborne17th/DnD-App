@@ -350,9 +350,33 @@
       <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
       <!-- Owl carousel  -->
       <script src="assets/vendors/owl-carousel/js/owl.carousel.js"></script>
-      <!-- Ollie js -->
+      
+      <script type="module">
+         // Import the functions you need from the SDKs you need
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+         // TODO: Add SDKs for Firebase products that you want to use
+         // https://firebase.google.com/docs/web/setup#available-libraries
+       
+         // Your web app's Firebase configuration
+         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+         const firebaseConfig = {
+           apiKey: "AIzaSyAZbWyYIquLkj-XsXpQKrBGMjcEfOq2n2o",
+           authDomain: "custom-inventory-f4171.firebaseapp.com",
+           projectId: "custom-inventory-f4171",
+           storageBucket: "custom-inventory-f4171.appspot.com",
+           messagingSenderId: "737536444138",
+           appId: "1:737536444138:web:871e0f2f297b9128e1b993",
+           measurementId: "G-7BN9K446FH"
+         };
+       
+         // Initialize Firebase
+         const app = initializeApp(firebaseConfig);
+         const analytics = getAnalytics(app);
+       </script>
+
       <script src="assets/js/dragon.js"></script>
-      <script src="assets/js/inventory.js"></script>
+      <script type="module" src="assets/js/inventory.js"></script>
       <script src="assets/js/dnd.js"></script>
    </body>
 </html>
