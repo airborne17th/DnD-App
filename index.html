@@ -102,7 +102,7 @@
                <div class="col-md-4">
                   <h6 class="xs-font mb-0">Abilities, Alignment, Skills</h6>
                   <h3 class="section-title">Learn More</h3>
-                  <p>Learn a bit more about Dungeons and Dragons and get some details on the character sheet. For reference and an official printable <a href="https://dnd.wizards.com/resources/character-sheets">character sheet</a>
+                  <p>Learn a bit more about Dungeons and Dragons and get some details on the character sheet. For reference and an official printable <a href="./assets/pdf/dnd-character-sheet.pdf" download>character sheet</a>
                   </p>
                </div>
                <div class="col-sm-12 col-md-8 ml-auto">
@@ -185,6 +185,82 @@
                   </div>
                </div>
             </div>
+         </div>
+      </section>
+      <section class="section">
+         <div class="container">
+            <h6 class="xs-font mb-0">Fill out details</h6>
+            <h3 class="section-title">Character Sheet</h3>
+            <div class="infos-wrapper">
+               <table>
+                  <tr>
+                     <th>
+                        <label for="cname">Character name:</label><br />
+                        <input type="text" id="cname" name="cname">
+                     </th>
+                     <th>
+               <h6>Race</h6>
+               <select name="race" id="race" size="4">
+                  <option value="Dwarf">Dwarf</option>
+                  <option value="Elf">Elf</option>
+                  <option value="Halfling">Halfling</option>
+                  <option value="Human">Human</option>
+                  <option value="Dragonborn">Dragonborn</option>
+                  <option value="Gnome">Gnome</option>
+                  <option value="Half-Elf">Half-Elf</option>
+                  <option value="Half-Orc">Half-Orc</option>
+                  <option value="Tiefling">Tiefling</option>
+               </select>
+            </th>
+            <th>
+               <h6>Class</h6>
+               <select name="class" id="class" size="4">
+                  <option value="Barbarian">Barbarian</option>
+                  <option value="Bard">Bard</option>
+                  <option value="Cleric">Cleric</option>
+                  <option value="Druid">Druid</option>
+                  <option value="Fighter">Fighter</option>
+                  <option value="Monk">Monk</option>
+                  <option value="Paladin">Paladin</option>
+                  <option value="Rogue">Rogue</option>
+                  <option value="Sorcerer">Sorcerer</option>
+                  <option value="Warlock">Warlock</option>
+                  <option value="Wizard">Wizard</option>
+               </select>
+            </th>
+            <th>
+               <h6>Class</h6>
+               <select name="background" id="background" size="4">
+                  <option value="Acolyte">Acolyte</option>
+                  <option value="Charlatan">Charlatan</option>
+                  <option value="Criminal">Criminal</option>
+                  <option value="Entertainer">Entertainer</option>
+                  <option value="FolkHero">Folk Hero</option>
+                  <option value="GuildArtisan">Guild Artisan</option>
+                  <option value="Hermit">Hermit</option>
+                  <option value="Noble">Noble</option>
+                  <option value="Outlander">Outlander</option>
+                  <option value="Sage">Sage</option>
+                  <option value="Sailor">Sailor</option>
+                  <option value="Soldier">Soldier</option>
+                  <option value="Urchin">Urchin</option>
+               </select>
+            </th>
+            <th>
+               <h6>Randomize Ability Scores <span class="popup" onclick="helpAbilityScores()">(i)
+                  <span class="popuptext" id="helpPopup">How ability scores are randomized. Four D6s are rolled, the lowest number is dropped, the remaining three numbers are added together.</span>
+            </span>
+               </h6>
+               <button class="sub-button" role="button" onclick="randomizeScores()">Randomize</button>
+               <button class="sub-button" role="button" onclick="standardScores()">Standard</button>
+               <p id="score-list">
+               </p>
+            </th>
+            <th>
+               <button class="sub-button" role="button" onclick="downloadCharData()">Finalize</button>
+            </th>
+            </tr>
+            </table>
          </div>
       </section>
       <section class="section" id="gallery">
@@ -342,6 +418,11 @@
             </footer>
          </div>
       </section>
+
+      <audio id="die-audio">
+         <source src="./assets/sound/dice.mp3" type="audio/mpeg">
+       </audio>
+
       <!-- core  -->
       <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
       <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>

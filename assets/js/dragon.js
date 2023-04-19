@@ -62,3 +62,8 @@ $('#owl-testmonial').owlCarousel({
     nav: true,
     dots: false
 })
+
+function helpAbilityScores() {
+    var popup = document.getElementById("helpPopup");
+    popup.classList.toggle("show");
+}
